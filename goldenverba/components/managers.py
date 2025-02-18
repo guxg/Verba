@@ -57,6 +57,7 @@ from goldenverba.components.embedding.OllamaEmbedder import OllamaEmbedder
 from goldenverba.components.embedding.UpstageEmbedder import UpstageEmbedder
 from goldenverba.components.embedding.WeaviateEmbedder import WeaviateEmbedder
 from goldenverba.components.embedding.VoyageAIEmbedder import VoyageAIEmbedder
+from goldenverba.components.embedding.DashscopeEmbedder import DashscopeEmbedder
 from goldenverba.components.embedding.SentenceTransformersEmbedder import (
     SentenceTransformersEmbedder,
 )
@@ -109,6 +110,7 @@ if production != "Production":
         VoyageAIEmbedder(),
         CohereEmbedder(),
         OpenAIEmbedder(),
+        DashscopeEmbedder(),
     ]
     retrievers = [WindowRetriever()]
     generators = [
@@ -146,6 +148,7 @@ else:
         UpstageEmbedder(),
         CohereEmbedder(),
         OpenAIEmbedder(),
+        DashscopeEmbedder(),
     ]
     retrievers = [WindowRetriever()]
     generators = [
